@@ -87,11 +87,7 @@ def server_loop(local_host, local_port, remote_host, remote_port, receive_first)
         proxy_thread.start()
 
 def main():
-    if len(sys.argv[1:]) != 5:
-        print('Usage: ./proxy.py [localhost] [localport] [remotehost] [remoteport] [receive_first]')
-        print('Example: ./proxy.py 127.0.0.1 9000 10.12.132.1 9000 True')
-        sys.exit(1)
- 
+
     local_host = "0.0.0.0"
     local_port = int(os.environ.get("PORT", 25565))
     print(int(os.environ.get("PORT", 5000)))
